@@ -186,7 +186,8 @@ namespace SIMEXPRO.DataAccess.Repositories.Adua
 
         public RequestStatus Update(tbDuca item)
         {
-            using var db = new SqlConnection(SIMEXPRO.ConnectionString);
+            //using var db = new SqlConnection(SIMEXPRO.ConnectionString);
+            using var db = new SqlConnection("data source=simexproserver.database.windows.net; initial catalog=SIMEXPRO; user id=admin1; password=Administracion_123");
 
             var parameters = new DynamicParameters();
 
@@ -214,6 +215,7 @@ namespace SIMEXPRO.DataAccess.Repositories.Adua
 
             return new RequestStatus()
             {
+                CodeStatus = respuesta == "1" ? 1 : 0,
                 MessageStatus = respuesta
             };
         }
