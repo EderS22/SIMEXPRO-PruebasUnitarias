@@ -1,5 +1,4 @@
 using AutoMapper;
-//using Events_Company_R.API.Extentions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
